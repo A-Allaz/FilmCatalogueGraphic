@@ -40,42 +40,19 @@ namespace $safeprojectname$ {
 	private: System::Windows::Forms::Button^ DetailedDisplayButton;
 	private: System::Windows::Forms::Button^ QuitButton;
 	protected:
-
 	protected:
-
-
-
-
 	private: System::Windows::Forms::Label^ TitleLabel;
 	private: System::Windows::Forms::TextBox^ TitleBox;
 	private: System::Windows::Forms::TextBox^ MarkBox;
-
-
-
 	private: System::Windows::Forms::Label^ MarkLabel;
 	private: System::Windows::Forms::TextBox^ DirectorBox;
-
-
 	private: System::Windows::Forms::Label^ DirectorLabel;
 	private: System::Windows::Forms::TextBox^ YearBox;
-
-
-
 	private: System::Windows::Forms::Label^ YearLabel;
-
-
-
-
-	private: System::Windows::Forms::ListBox^ CatalogDisplayBox;
 	private: System::Windows::Forms::TextBox^ CommentBox;
 	private: System::Windows::Forms::Label^ CommentLabel;
-
-
-
-
-
-
-
+	private: System::Windows::Forms::Button^ NewFilmButton;
+	private: System::Windows::Forms::ListBox^ CatalogDisplayBox;
 	private:
 		/// <summary>
 		/// Required designer variable.
@@ -102,14 +79,15 @@ namespace $safeprojectname$ {
 			this->DirectorLabel = (gcnew System::Windows::Forms::Label());
 			this->YearBox = (gcnew System::Windows::Forms::TextBox());
 			this->YearLabel = (gcnew System::Windows::Forms::Label());
-			this->CatalogDisplayBox = (gcnew System::Windows::Forms::ListBox());
 			this->CommentBox = (gcnew System::Windows::Forms::TextBox());
 			this->CommentLabel = (gcnew System::Windows::Forms::Label());
+			this->NewFilmButton = (gcnew System::Windows::Forms::Button());
+			this->CatalogDisplayBox = (gcnew System::Windows::Forms::ListBox());
 			this->SuspendLayout();
 			// 
 			// AddButton
 			// 
-			this->AddButton->Location = System::Drawing::Point(19, 14);
+			this->AddButton->Location = System::Drawing::Point(19, 43);
 			this->AddButton->Name = L"AddButton";
 			this->AddButton->Size = System::Drawing::Size(279, 23);
 			this->AddButton->TabIndex = 0;
@@ -119,7 +97,7 @@ namespace $safeprojectname$ {
 			// 
 			// ModifyButton
 			// 
-			this->ModifyButton->Location = System::Drawing::Point(19, 43);
+			this->ModifyButton->Location = System::Drawing::Point(19, 72);
 			this->ModifyButton->Name = L"ModifyButton";
 			this->ModifyButton->Size = System::Drawing::Size(279, 23);
 			this->ModifyButton->TabIndex = 1;
@@ -160,7 +138,7 @@ namespace $safeprojectname$ {
 			// TitleLabel
 			// 
 			this->TitleLabel->AutoSize = true;
-			this->TitleLabel->Location = System::Drawing::Point(16, 72);
+			this->TitleLabel->Location = System::Drawing::Point(16, 118);
 			this->TitleLabel->Name = L"TitleLabel";
 			this->TitleLabel->Size = System::Drawing::Size(39, 16);
 			this->TitleLabel->TabIndex = 5;
@@ -169,7 +147,7 @@ namespace $safeprojectname$ {
 			// 
 			// TitleBox
 			// 
-			this->TitleBox->Location = System::Drawing::Point(19, 91);
+			this->TitleBox->Location = System::Drawing::Point(19, 137);
 			this->TitleBox->Name = L"TitleBox";
 			this->TitleBox->Size = System::Drawing::Size(396, 22);
 			this->TitleBox->TabIndex = 6;
@@ -177,7 +155,7 @@ namespace $safeprojectname$ {
 			// 
 			// MarkBox
 			// 
-			this->MarkBox->Location = System::Drawing::Point(19, 135);
+			this->MarkBox->Location = System::Drawing::Point(19, 181);
 			this->MarkBox->Name = L"MarkBox";
 			this->MarkBox->Size = System::Drawing::Size(396, 22);
 			this->MarkBox->TabIndex = 8;
@@ -186,7 +164,7 @@ namespace $safeprojectname$ {
 			// MarkLabel
 			// 
 			this->MarkLabel->AutoSize = true;
-			this->MarkLabel->Location = System::Drawing::Point(16, 116);
+			this->MarkLabel->Location = System::Drawing::Point(16, 162);
 			this->MarkLabel->Name = L"MarkLabel";
 			this->MarkLabel->Size = System::Drawing::Size(96, 16);
 			this->MarkLabel->TabIndex = 7;
@@ -195,7 +173,7 @@ namespace $safeprojectname$ {
 			// 
 			// DirectorBox
 			// 
-			this->DirectorBox->Location = System::Drawing::Point(19, 179);
+			this->DirectorBox->Location = System::Drawing::Point(19, 225);
 			this->DirectorBox->Name = L"DirectorBox";
 			this->DirectorBox->Size = System::Drawing::Size(396, 22);
 			this->DirectorBox->TabIndex = 10;
@@ -204,7 +182,7 @@ namespace $safeprojectname$ {
 			// DirectorLabel
 			// 
 			this->DirectorLabel->AutoSize = true;
-			this->DirectorLabel->Location = System::Drawing::Point(16, 160);
+			this->DirectorLabel->Location = System::Drawing::Point(16, 206);
 			this->DirectorLabel->Name = L"DirectorLabel";
 			this->DirectorLabel->Size = System::Drawing::Size(60, 16);
 			this->DirectorLabel->TabIndex = 9;
@@ -213,7 +191,7 @@ namespace $safeprojectname$ {
 			// 
 			// YearBox
 			// 
-			this->YearBox->Location = System::Drawing::Point(19, 223);
+			this->YearBox->Location = System::Drawing::Point(19, 269);
 			this->YearBox->Name = L"YearBox";
 			this->YearBox->Size = System::Drawing::Size(396, 22);
 			this->YearBox->TabIndex = 12;
@@ -222,26 +200,16 @@ namespace $safeprojectname$ {
 			// YearLabel
 			// 
 			this->YearLabel->AutoSize = true;
-			this->YearLabel->Location = System::Drawing::Point(16, 204);
+			this->YearLabel->Location = System::Drawing::Point(16, 250);
 			this->YearLabel->Name = L"YearLabel";
 			this->YearLabel->Size = System::Drawing::Size(42, 16);
 			this->YearLabel->TabIndex = 11;
 			this->YearLabel->Text = L"Year :";
 			this->YearLabel->Click += gcnew System::EventHandler(this, &MyForm::YearLabel_Click);
 			// 
-			// CatalogDisplayBox
-			// 
-			this->CatalogDisplayBox->FormattingEnabled = true;
-			this->CatalogDisplayBox->ItemHeight = 16;
-			this->CatalogDisplayBox->Location = System::Drawing::Point(421, 72);
-			this->CatalogDisplayBox->Name = L"CatalogDisplayBox";
-			this->CatalogDisplayBox->Size = System::Drawing::Size(378, 324);
-			this->CatalogDisplayBox->TabIndex = 15;
-			this->CatalogDisplayBox->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::CatalogDisplayBox_SelectedIndexChanged);
-			// 
 			// CommentBox
 			// 
-			this->CommentBox->Location = System::Drawing::Point(19, 267);
+			this->CommentBox->Location = System::Drawing::Point(19, 313);
 			this->CommentBox->Name = L"CommentBox";
 			this->CommentBox->Size = System::Drawing::Size(396, 22);
 			this->CommentBox->TabIndex = 17;
@@ -250,21 +218,42 @@ namespace $safeprojectname$ {
 			// CommentLabel
 			// 
 			this->CommentLabel->AutoSize = true;
-			this->CommentLabel->Location = System::Drawing::Point(16, 248);
+			this->CommentLabel->Location = System::Drawing::Point(16, 294);
 			this->CommentLabel->Name = L"CommentLabel";
 			this->CommentLabel->Size = System::Drawing::Size(70, 16);
 			this->CommentLabel->TabIndex = 16;
 			this->CommentLabel->Text = L"Comment :";
 			this->CommentLabel->Click += gcnew System::EventHandler(this, &MyForm::CommentLabel_Click);
 			// 
+			// NewFilmButton
+			// 
+			this->NewFilmButton->Location = System::Drawing::Point(19, 14);
+			this->NewFilmButton->Name = L"NewFilmButton";
+			this->NewFilmButton->Size = System::Drawing::Size(279, 23);
+			this->NewFilmButton->TabIndex = 18;
+			this->NewFilmButton->Text = L"Enter new Film";
+			this->NewFilmButton->UseVisualStyleBackColor = true;
+			this->NewFilmButton->Click += gcnew System::EventHandler(this, &MyForm::NewFilmButton_Click);
+			// 
+			// CatalogDisplayBox
+			// 
+			this->CatalogDisplayBox->FormattingEnabled = true;
+			this->CatalogDisplayBox->ItemHeight = 16;
+			this->CatalogDisplayBox->Location = System::Drawing::Point(421, 80);
+			this->CatalogDisplayBox->Name = L"CatalogDisplayBox";
+			this->CatalogDisplayBox->Size = System::Drawing::Size(377, 324);
+			this->CatalogDisplayBox->TabIndex = 19;
+			this->CatalogDisplayBox->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::CatalogDisplayBox_SelectedIndexChanged);
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(811, 446);
+			this->Controls->Add(this->CatalogDisplayBox);
+			this->Controls->Add(this->NewFilmButton);
 			this->Controls->Add(this->CommentBox);
 			this->Controls->Add(this->CommentLabel);
-			this->Controls->Add(this->CatalogDisplayBox);
 			this->Controls->Add(this->YearBox);
 			this->Controls->Add(this->YearLabel);
 			this->Controls->Add(this->DirectorBox);
@@ -286,37 +275,58 @@ namespace $safeprojectname$ {
 
 		}
 #pragma endregion
-private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void CommentLabel_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void CommentBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void YearBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void YearLabel_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void DirectorBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void DirectorLabel_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void MarkBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void MarkLabel_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void TitleBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void TitleLabel_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void QuitButton_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void DetailedDisplayButton_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void SimpleDisplayButton_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void ModifyButton_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-private: System::Void AddButton_Click(System::Object^ sender, System::EventArgs^ e) {
-}
-};
+	private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
+	}
+	private: System::Void CommentLabel_Click(System::Object^ sender, System::EventArgs^ e) {
+		//nothing
+	}
+	private: System::Void CommentBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		//nothing
+	}
+	private: System::Void YearBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		//nothing
+	}
+	private: System::Void YearLabel_Click(System::Object^ sender, System::EventArgs^ e) {
+		//nothing
+	}
+	private: System::Void DirectorBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		//nothing
+	}
+	private: System::Void DirectorLabel_Click(System::Object^ sender, System::EventArgs^ e) {
+		//nothing
+	}
+	private: System::Void MarkBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		//nothing
+	}
+	private: System::Void MarkLabel_Click(System::Object^ sender, System::EventArgs^ e) {
+		//nothing
+	}
+	private: System::Void TitleBox_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+		//nothing
+	}
+	private: System::Void TitleLabel_Click(System::Object^ sender, System::EventArgs^ e) {
+		//nothing
+	}
+	private: System::Void QuitButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		//save the catalog in a save-file and quit the interface
+	}
+	private: System::Void DetailedDisplayButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		//display all the film infos
+	}
+	private: System::Void SimpleDisplayButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		//display only the title and the note of the film
+	}
+	private: System::Void ModifyButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		//modify the Film in both the catalog and the listBox (display)
+	}
+	private: System::Void AddButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		//add the film to the catalog and to the listBox (display)
+	}
+	private: System::Void NewFilmButton_Click(System::Object^ sender, System::EventArgs^ e) {
+		//set all textboxes to ""
+	}
+	private: System::Void CatalogDisplayBox_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
+		//when selected, put the film in all the TextBoxes in order to allow the user to change its caracteristics
+	}
+	};
 }

@@ -1,0 +1,4 @@
+﻿  MyForm.cpp
+D:\Code-Info\Perso\FilmCatalogGraphic\FilmCatalogGUI\FilmCatalogGUI\MyForm.cpp(8,33): warning C4829: Paramètres potentiellement incorrects dans la fonction main. Utilisez 'int main(Platform::Array<Platform::String^>^ argv)' à la place
+  MyForm.obj : module MSIL détecté ; liens incrémentiels désactivés pour MSIL ; édition de liens complète en cours
+  FilmCatalogGUI.vcxproj -> D:\Code-Info\Perso\FilmCatalogGraphic\FilmCatalogGUI\x64\Debug\FilmCatalogGUI.exe

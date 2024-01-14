@@ -1,0 +1,3 @@
+D:\Code-Info\Perso\FilmCatalogGraphic\FilmCatalogGUI\FilmCatalogGUI\x64\Debug\FilmCatalogGUI.vcxproj.AssemblyReference.cache
+D:\Code-Info\Perso\FilmCatalogGraphic\FilmCatalogGUI\FilmCatalogGUI\x64\Debug\FilmCatalogGUI.MyForm.resources
+D:\Code-Info\Perso\FilmCatalogGraphic\FilmCatalogGUI\FilmCatalogGUI\x64\Debug\FilmCatalogGUI.vcxproj.GenerateResource.cache
