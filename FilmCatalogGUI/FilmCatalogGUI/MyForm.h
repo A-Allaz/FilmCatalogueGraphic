@@ -1,4 +1,6 @@
 #pragma once
+#include "hFiles/Catalogue.h"
+#include "hFiles/Film.h"
 
 namespace $safeprojectname$ {
 
@@ -313,18 +315,31 @@ namespace $safeprojectname$ {
 	private: System::Void DetailedDisplayButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		//display all the film infos
 	}
+
 	private: System::Void SimpleDisplayButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		//display only the title and the note of the film
 	}
+
 	private: System::Void ModifyButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		//modify the Film in both the catalog and the listBox (display)
 	}
-	private: System::Void AddButton_Click(System::Object^ sender, System::EventArgs^ e) {
+
+	private: System::Void AddButton_Click(System::Object^ sender, System::EventArgs^ e)
+	{
 		//add the film to the catalog and to the listBox (display)
+
+		Film newFilm(this->TitleBox->Text, Convert::ToInt32(this->MarkBox->Text), this->DirectorBox->Text, Convert::ToInt32(this->YearBox->Text), this->CommentBox->Text);
+
+		this->TitleBox->Text = "";
+		this->MarkBox->Text = "";
+		this->DirectorBox->Text = "";
+		this->YearBox->Text = "";
+		this->CommentBox->Text = "";
 	}
 	private: System::Void NewFilmButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		//set all textboxes to ""
 	}
+
 	private: System::Void CatalogDisplayBox_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
 		//when selected, put the film in all the TextBoxes in order to allow the user to change its caracteristics
 	}
