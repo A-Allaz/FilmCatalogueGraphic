@@ -1,16 +1,17 @@
 #include "MyForm.h"
+#include <Windows.h>
+#include <iostream>
 
 using namespace System;
 using namespace System::Windows::Forms;
 
 [STAThreadAttribute]
+int main(array<String^>^ args) {
+    Application::EnableVisualStyles();
+    Application::SetCompatibleTextRenderingDefault(false);
 
-System::Void AddButton_Click(System::Object^ sender, System::EventArgs^ e);
+    $safeprojectname$::MyForm form;
+    Application::Run(% form);
 
-
-void main(array<String> args) {
-	Application::EnableVisualStyles();
-	Application::SetCompatibleTextRenderingDefault(false);
-	$safeprojectname$::MyForm form;
-	Application::Run(% form);
+    return 0;
 }

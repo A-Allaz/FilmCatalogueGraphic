@@ -1,10 +1,3 @@
 ﻿  MyForm.cpp
-D:\Code-Info\Perso\FilmCatalogGraphic\FilmCatalogGUI\FilmCatalogGUI\MyForm.h(331,15): error C2665: 'Film::Film' : aucune fonction surchargée n’a pu convertir tous les types d’arguments.
-D:\Code-Info\Perso\FilmCatalogGraphic\FilmCatalogGUI\FilmCatalogGUI\hFiles\Film.h(66,9): message : est peut-être 'Film::Film(const std::string,const int,const std::string,const int,const std::string)'
-D:\Code-Info\Perso\FilmCatalogGraphic\FilmCatalogGUI\FilmCatalogGUI\MyForm.h(331,15): message : 'Film::Film(const std::string,const int,const std::string,const int,const std::string)' : impossible de convertir l'argument 1 de 'System::String ^' en 'const std::string'
-D:\Code-Info\Perso\FilmCatalogGraphic\FilmCatalogGUI\FilmCatalogGUI\MyForm.h(331,30): message : Aucun opérateur de conversion définie par l'utilisateur disponible qui puisse effectuer cette conversion, ou l'opérateur ne peut pas être appelé
-D:\Code-Info\Perso\FilmCatalogGraphic\FilmCatalogGUI\FilmCatalogGUI\MyForm.h(331,15): message : lors de la tentative de mise en correspondance de la liste des arguments '(System::String ^, int, System::String ^, int, System::String ^)'
-D:\Code-Info\Perso\FilmCatalogGraphic\FilmCatalogGUI\FilmCatalogGUI\MyForm.cpp(11,11): error C2976: 'std::array' : nombre d'arguments modèle insuffisant
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\utility(138,7): message : voir la déclaration de 'std::array'
-D:\Code-Info\Perso\FilmCatalogGraphic\FilmCatalogGUI\FilmCatalogGUI\MyForm.cpp(11,6): error C2027: utilisation du type non défini 'std::array'
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.37.32822\include\utility(138,7): message : voir la déclaration de 'std::array'
+  MyForm.obj : module MSIL détecté ; liens incrémentiels désactivés pour MSIL ; édition de liens complète en cours
+  FilmCatalogGUI.vcxproj -> D:\Code-Info\Perso\FilmCatalogGraphic\FilmCatalogGUI\x64\Debug\FilmCatalogGUI.exe

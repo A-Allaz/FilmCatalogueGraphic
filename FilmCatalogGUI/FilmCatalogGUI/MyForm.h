@@ -1,6 +1,5 @@
 #pragma once
-#include "hFiles/Catalogue.h"
-#include "hFiles/Film.h"
+#include <msclr/marshal_cppstd.h>
 
 namespace $safeprojectname$ {
 
@@ -10,6 +9,8 @@ namespace $safeprojectname$ {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	using namespace System::Runtime::InteropServices;
+	using namespace std;
 
 	/// <summary>
 	/// Summary for MyForm
@@ -324,17 +325,20 @@ namespace $safeprojectname$ {
 		//modify the Film in both the catalog and the listBox (display)
 	}
 
-	private: System::Void AddButton_Click(System::Object^ sender, System::EventArgs^ e)
-	{
-		//add the film to the catalog and to the listBox (display)
+	private: System::Void AddButton_Click(System::Object^ sender, System::EventArgs^ e){
+		/*std::string title = msclr::interop::marshal_as<std::string>(TitleBox->Text);
+		int mark = Convert::ToInt32(MarkBox->Text);
+		std::string director = msclr::interop::marshal_as<std::string>(DirectorBox->Text);
+		int year = Convert::ToInt32(YearBox->Text);
+		std::string comment = msclr::interop::marshal_as<std::string>(CommentBox->Text);*/
 
-		Film newFilm(this->TitleBox->Text, Convert::ToInt32(this->MarkBox->Text), this->DirectorBox->Text, Convert::ToInt32(this->YearBox->Text), this->CommentBox->Text);
+		//Film newFilm(title, mark, director, year, comment);
 
-		this->TitleBox->Text = "";
-		this->MarkBox->Text = "";
-		this->DirectorBox->Text = "";
-		this->YearBox->Text = "";
-		this->CommentBox->Text = "";
+		TitleBox->Text = "";
+		MarkBox->Text = "";
+		DirectorBox->Text = "";
+		YearBox->Text = "";
+		CommentBox->Text = "";
 	}
 	private: System::Void NewFilmButton_Click(System::Object^ sender, System::EventArgs^ e) {
 		//set all textboxes to ""
